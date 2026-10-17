@@ -20,3 +20,11 @@ Authoritative: PHASE1_ORIGINAL_PARITY_KO.md, RECOVERY_PLAN.md, ORIGINAL_PARITY_M
 ## Next
 Finish/validate Windows Ghidra decompilation; maintain per-function unknowns; reconstruct original branches, error handling and data paths; trace original runtime; only then reproduce same algorithms and compare.
 Never overwrite the original or commit proprietary DLL bytes.
+
+## 2026-10-17 Phase 1, static pass 2
+- Re-validated supplied SHA-256 against mounted user file; read-only.
+- Identified original WASAPI initialize (0x3870), render transfer (0x4020), capture transfer (0x4380–0x460C); see ORIGINAL_WASAPI_DATAFLOW.md.
+- Verified 17 COM vtable callsites and 6 Windows audio GUIDs against actual DLL instructions/bytes (static only, runtime UNVERIFIED).
+- Corrected **590 .pdata ranges != 590 independent functions**; capture routine spans 4 unwind entries.
+- No replica built, no full semantic reconstruction, no parity test, and **no optimization**.
+- Next: exact sample format conversions, callback transfer, mode flags, exception/port lifecycle, missing function coverage, then original Windows runtime tracing.
