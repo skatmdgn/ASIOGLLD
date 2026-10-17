@@ -1,0 +1,26 @@
+# Keep proprietary original DLL and all decompiler output local
+original/
+local_output/
+*.dll
+*.pdb
+*.exe
+*.ilk
+*.obj
+*.o
+*.lib
+*.exp
+*.idb
+*.aps
+*.ncb
+*.suo
+*.vcxproj.user
+build/
+cmake-build-*/
+.vs/
+*.gpr
+*.rep
+*.gzf
+*.gdt
+*.log
+__pycache__/
+*.pyc
