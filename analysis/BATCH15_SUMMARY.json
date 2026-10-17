@@ -1,0 +1,22 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "original_size": 173056,
+  "notification_com_vtables": 2,
+  "slots_each": 8,
+  "opcode_pins": 291,
+  "checked_operands": 44,
+  "direct_call_edges": 16,
+  "bounded_windows": 10,
+  "basic_blocks": 108,
+  "intra_window_edges": 117,
+  "window_call_sites": 31,
+  "new_local_tests_passed": 32,
+  "prior_regression_passed": 224,
+  "total_local_tests_passed": 256,
+  "skipped": 0,
+  "original_executed": false,
+  "replica_built": false,
+  "parity_verified": false,
+  "ci_runs": 0,
+  "optimization_changes": 0
+}

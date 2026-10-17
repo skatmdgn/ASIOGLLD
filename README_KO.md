@@ -127,3 +127,11 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [후보 포맷 부분 정적 모델](tools/batch13_format_model.py) / [테스트](tests/test_batch13_format_model.py)
 - [C++ x64 계층 구조체 정적 배치 후보](include/batch13_format_tree_layout.hpp)
 - 원본에서 116개 opcode/20개 호출/8개 CFG 구간(323블록,467내부 간선) 검증. 신규 38 + 이전 154 = 총 192 로컬 테스트 통과, 스킵 0. 전체 리포트와 원본 바이트 CSV 및 전체 분석기/코드는 대화의 Batch13 ZIP 참고. 원본 DLL/Ghidra 출력/전용 대체 코드 공개 안 함. CI·최적화 없음.
+
+
+## Batch 15: 원본 COM 장치 알림 객체 두 종류와 서로 다른 동작 복원
+- [정확한 원본 IMMNotificationClient 8슬롯 x2, Reset 요청·포트 Stop/COM 수명](docs/BATCH15_COM_NOTIFICATIONS.md)
+- [새 채팅 개발 이어가기 상태문서](docs/BATCH15_STATUS.md)
+- [Python 제한적 알림 상태 분석 모델](tools/batch15_notification_model.py)
+- [검증 결과 JSON](analysis/BATCH15_SUMMARY.json)
+- **전체 실제 검사 도구/291 pinned opcode CSV/44 operands/16 direct CALL/10 window CFG/32 신규 테스트/C++ 구조체**는 대화의 `ASIOGLLD_Original_Recovery_Batch15.zip`에 포함. 224 기존 테스트 포함 로컬 총 256 통과, 스킵 0. Windows 실행·동등 재현 DLL·CI·최적화 모두 미완료.
