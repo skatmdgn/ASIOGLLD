@@ -73,3 +73,8 @@ Never overwrite the original or commit proprietary DLL bytes.
 - Full .text virtual size ends at RVA 0x1D0BA; 305 distinct direct call targets. Previous 304 came from an incorrect <0x1D000 cutoff (omitted 0x1D050).
 - 67 direct targets outside unwind: 11 resolved PE import thunks, 2 ret stubs, 1 internal jump stub, 53 unresolved candidates. See `docs/UNWIND_LEAF_TRIAGE_STAGE5.md`.
 - Remaining: exact registry failure semantics, UI handlers and persistence, all indirect COM paths, all original functions, Ghidra/Windows runtime, faithful replica and differential parity. NO optimization.
+
+
+## Phase 1 Stage 5b — original GUI buffer-value transforms
+- Traced 0xB280 (buffer duration -> slider index) and 0xB310 (slider index -> duration). Uses original [10,50,100] data table, 10–100 custom clamp, midpoint cutoffs 30 and 75, and unusual >100 ordinary-mode fallback to index 0.
+- Added pure analysis model and four unit tests; local tests passed. This is NOT the original Windows runtime and NOT replica parity. See docs/BUFFER_SLIDER_ORIGINAL_ALGORITHM.md.

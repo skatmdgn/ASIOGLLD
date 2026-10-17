@@ -32,3 +32,6 @@ The separate event handlers, listbox selection, all failure behavior and immedia
 - `tools/verify_registry_ui_stage5.py`: 30 pinned opcode sites plus buffer preset table, original SHA check, no external packages.
 - The Stage 5 companion ZIP includes `original_registry_ui_audit.py`, which independently parses the PE import table, verifies **11/11** named imports and **30/30** opcode sites, and writes a machine-readable control-flow summary.
 - Original-only static tests passed here; no original Windows debugger session, no replica, no parity, no optimizations.
+
+
+**Stage 5b detail:** bidirectional conversions are fully spelled out in [BUFFER_SLIDER_ORIGINAL_ALGORITHM.md](BUFFER_SLIDER_ORIGINAL_ALGORITHM.md), including the original >100 ordinary-mode fallback to position 0.

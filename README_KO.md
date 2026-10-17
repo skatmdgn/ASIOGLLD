@@ -55,3 +55,5 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [67개 예외정보 외부 직접 호출의 분류](docs/UNWIND_LEAF_TRIAGE_STAGE5.md)
 - [설정/UI 정적 검증 스크립트](tools/verify_registry_ui_stage5.py)
 - 검증된 원본 명령어 30/30, 레지스트리/GUI API import 11/11, preset [10,50,100]. 동등성 구현/최적화는 아직 없음.
+
+- [원본 버퍼 ↔ 슬라이더 변환 알고리즘](docs/BUFFER_SLIDER_ORIGINAL_ALGORITHM.md), [정적 Python 모델](tools/buffer_slider_model.py), [경계값 단위 테스트](tests/test_buffer_slider_model.py).
