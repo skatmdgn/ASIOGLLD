@@ -150,3 +150,12 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [현재 복원 상태와 필수 다음 단계](docs/BATCH17_STATUS.md)
 - [정적 검증 총괄](analysis/BATCH17_SUMMARY.json)
 - 전체 Python 정적 분석기, 61 원본 opcode 근거, 6개 CFG, 322개 로컬 테스트 결과 및 후보 구조체는 별도 Batch17 ZIP에 포함. 원본 Windows 실행·복원 DLL 패리티·CI·최적화 미완료.
+
+
+## Batch18 — 원본 COM apartment·알림 등록 실패·CAsio 소멸자 수명 감사
+- [원본 CoInitializeEx/CoCreateInstance, 별도 두 리스너, WorkerStop vs 소멸자](docs/BATCH18_COM_LIFETIME.md)
+- [Batch18 상태/이어가기](docs/BATCH18_STATUS.md)
+- [원본 SHA/리스너 vtable/COM import 축약 검증 코드](tools/batch18_original_spotcheck.py)
+- [등록 실패 시 COM OS 소유권을 미확인으로 유지하는 부분 모델](tools/batch18_listener_model.py)
+- [테스트 소스](tests/test_batch18_listener_model.py) 및 [분석 통계](analysis/BATCH18_SUMMARY.json)
+- 별도 **ASIOGLLD_Original_Recovery_Batch18.zip**에 완전한 188핀 검증기, 9개 CFG(197블록/273내부 간선), Win64 C++ 레이아웃, 이전 322+신규 35=357개 로컬 테스트/전체 로그를 보관. **원본 Windows 실행/재현 DLL 동등성·CI·최적화 미완료.**
