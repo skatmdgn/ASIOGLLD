@@ -35,3 +35,10 @@ Never overwrite the original or commit proprietary DLL bytes.
 - Mapped capture GetNextPacketSize/GetBuffer/helper 0x2A90/ReleaseBuffer and called helpers 0x2900 and 0x2750.
 - Stage 1 direct-call map contains 304 unique direct targets; 67 are outside all 590 unwind ranges. These are **candidates, not a validated function count**.
 - See AUDIO_SAMPLE_TRANSFER.md and COVERAGE_LEDGER.md. Still no original-executable parity test or complete source reconstruction.
+
+
+## 2026-10-17, Stage 3: callback/worker reconstruction
+- Derived original ASIO callback pipeline from createBuffers, worker setup/CreateThread, 0x8F80 entry, 0x97B0 event dispatcher, and 0x9610 callback helper.
+- Verified 30/30 opcode/pointer or control-flow sites against the original SHA. Source: `docs/ASIO_CALLBACK_PIPELINE.md`, `tools/verify_callback_bytes.py`.
+- Found the conditional initial 2-buffer pre-roll path and all-ports-mask gating before ASIO callback. Recovered limited worker object fields and timeInfo.flags=7.
+- No original runtime debugger tracing or fully reconstructed code or replica parity yet. No optimization.
