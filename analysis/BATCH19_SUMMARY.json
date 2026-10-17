@@ -1,0 +1,42 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "original_bytes": 173056,
+  "pdata_records": 590,
+  "chained_unwind_records": 221,
+  "independent_unwind_roots": 369,
+  "multi_segment_roots": 76,
+  "handler_roots": 84,
+  "handlers": {
+    "0x105C0": 30,
+    "0x12510": 42,
+    "0x16F80": 12
+  },
+  "linear_disassembly_instructions": 33194,
+  "unwind_segment_basic_blocks": 6331,
+  "within_segment_cfg_edges": 8807,
+  "outside_segment_edges": 240,
+  "edge_classification": {
+    "same_root": 224,
+    "other_root": 9,
+    "unknown_indirect": 7
+  },
+  "total_calls": 2097,
+  "call_classification": {
+    "direct_text": 1453,
+    "direct_nontext": 1,
+    "iat": 479,
+    "other_indirect": 164
+  },
+  "iat_unique_slots": 148,
+  "call_targets_outside_pdata": 67,
+  "new_local_tests": 30,
+  "previous_local_regression_tests": 357,
+  "total_local_tests": 387,
+  "skipped": 0,
+  "ghidra_run": false,
+  "original_windows_runtime": false,
+  "faithful_replica_built": false,
+  "runtime_parity": false,
+  "CI_runs": 0,
+  "optimization_changes": 0
+}

@@ -159,3 +159,10 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [등록 실패 시 COM OS 소유권을 미확인으로 유지하는 부분 모델](tools/batch18_listener_model.py)
 - [테스트 소스](tests/test_batch18_listener_model.py) 및 [분석 통계](analysis/BATCH18_SUMMARY.json)
 - 별도 **ASIOGLLD_Original_Recovery_Batch18.zip**에 완전한 188핀 검증기, 9개 CFG(197블록/273내부 간선), Win64 C++ 레이아웃, 이전 322+신규 35=357개 로컬 테스트/전체 로그를 보관. **원본 Windows 실행/재현 DLL 동등성·CI·최적화 미완료.**
+
+## Batch19 — .pdata 전수 unwind 연결 및 전역 제어 흐름 감사
+- [590 원본 pdata, 221 CHAININFO, 369 root와 전체 CALL/JMP 지도](docs/BATCH19_UNWIND_ROOT_GRAPH.md)
+- [정확한 다음 작업, 미완료 조건, 전체 Ghidra 진행 상황](docs/BATCH19_STATUS.md)
+- [오리지널 SHA 고정 Python stdlib unwind 검증기](tools/batch19_original_unwind_check.py)
+- [재현 가능한 통계 및 제한사항](analysis/BATCH19_SUMMARY.json)
+- 전체 590-segment·369-root·2,946 call/jmp 근거와 Ghidra exporter/bridge, 30 신규 및 357 기존 회귀 로그는 대화의 Batch19 ZIP (39개 파일). 387/387 로컬 검사 통과와 Windows 실제 원본·복제 실행 동등성은 별개. CI·최적화·원본 수정 0.
