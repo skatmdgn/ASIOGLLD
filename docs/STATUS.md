@@ -57,3 +57,10 @@ Never overwrite the original or commit proprietary DLL bytes.
 - Confirmed 305 direct CALL targets (vs previous 304 with narrower .pdata-owned caller filter), 67 outside unwind. See COVERAGE_LEDGER_STAGE4.md.
 - Existing 30 callback and 13 IASIO basic checks re-executed: all match original; no new Windows runtime parity.
 - Stage 4 comprehensive Python tools/data available in the Stage4 analysis ZIP, plus reproducible summary script tools/recovery_v4.py. Still no faithful replica and no optimization.
+
+
+## Stage 4b — original COM class-factory metadata
+- Verified original driver CLSID 52ebae30-47e4-483f-b87b-770314306005 from raw bytes at RVA 0x26690, standard IUnknown and IClassFactory IIDs.
+- Confirmed COM factory allocation 0x18 bytes, original CAsio allocation 0xD0, and DllGetClassObject primary error paths. tools/verify_com_factory.py: 9/9 passes against original.
+- DllCanUnloadNow references 0x27AB0 and 0x27AA4 counters; full object lifetime still unresolved.
+- UI document corrected IDs 1109/1110 to raw Windows LISTBOX ordinal 131 (not SysListView32).

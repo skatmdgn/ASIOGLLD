@@ -13,15 +13,15 @@ Direct inspection of the original PE `.rsrc` resource directory using a custom W
 |---:|---|---|
 | 1086 | BUTTON | Allow ASIO host application to take exclusive control of selected port configuration |
 | 1090 | msctls_trackbar32 | buffer-size slider |
-| 1109 | SysListView32 | output ports |
-| 1110 | SysListView32 | input ports |
+| 1109 | LISTBOX (ordinal 131) | output port selector |
+| 1110 | LISTBOX (ordinal 131) | input port selector |
 | 1117 | BUTTON | Help |
 | 1118 | BUTTON | User definable |
-| 1119 | EDIT | numeric buffer display/input |
+| 1119 | EDIT (ordinal 129) | numeric buffer field |
 | 1 | BUTTON | OK |
 | 2 | BUTTON | Cancel |
 
-The `SysListView32` names are resolved from Windows dialog standard class ordinal **0x83** (LISTBOX) in the raw record? Original parser reports class ordinal 131, which is Windows LISTBOX, **not SysListView32**. Therefore the **correct raw class** is ordinal 131, and no control should be relabeled as SysListView32 without runtime proof. For ID 1109/1110 the original ordinal is 131. Button ordinal 128. ID 1119 original edit ordinal 129.
+For IDs 1109 and 1110, the binary class value is ordinal **131**, the standard Windows **LISTBOX** class. Button class ordinal is 128; ID 1119's EDIT class ordinal is 129. Actual runtime behavior still needs investigation.
 
 ### Important distinction
 
