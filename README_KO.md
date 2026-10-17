@@ -135,3 +135,11 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [Python 제한적 알림 상태 분석 모델](tools/batch15_notification_model.py)
 - [검증 결과 JSON](analysis/BATCH15_SUMMARY.json)
 - **전체 실제 검사 도구/291 pinned opcode CSV/44 operands/16 direct CALL/10 window CFG/32 신규 테스트/C++ 구조체**는 대화의 `ASIOGLLD_Original_Recovery_Batch15.zip`에 포함. 224 기존 테스트 포함 로컬 총 256 통과, 스킵 0. Windows 실행·동등 재현 DLL·CI·최적화 모두 미완료.
+
+
+## Batch 16 — 원본 스레드 종료·COM 리스너 등록 실패 시 수명 구조
+- [대기 3000ms 결과 무검사·포트 COM 해제·장치 알림 구분](docs/BATCH16_WORKER_COM_LIFETIME.md)
+- [모든 미완료와 재개 체크포인트](docs/BATCH16_STATUS.md)
+- [정상 조건 일부의 정적 Worker 상태 모델](tools/batch16_worker_lifetime_model.py)
+- [검증 수치/미완료 상태 JSON](analysis/BATCH16_SUMMARY.json)
+- 자세한 기계어 307곳·64 피연산자·11 직접 호출·10 IAT 호출·10 CFG·293개 로컬 실행 검사 기록 및 Win64 C++ 레이아웃은 이 대화의 별도 Batch16 ZIP에 제공. 원본 DLL·전체 디스어셈블은 공개 저장소에 올리지 않음. 원본 수정 0, CI 0, 최적화 0. 재현 DLL/원본 실행 동등성 검증 미완료.
