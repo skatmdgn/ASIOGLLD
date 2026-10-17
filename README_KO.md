@@ -174,3 +174,12 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [Python stdlib만으로 원본 SHA·7개 점프 테이블 재검증](tools/batch20_jump_table_spotcheck.py)
 - [검증 수치 및 미완료](analysis/BATCH20_SUMMARY.json)
 - 상세 도구, 274-row target CSV, 590-row CFG, 67 gap-call-target CSV, 32신규 + 387기존 테스트는 이 대화의 Batch20 ZIP(37 파일)에 있음. **419/419 local tests, no skips**. Ghidra 전체 실행/원본·복제 Windows parity/CI/최적화 모두 미실행. 원본 DLL 변형 없음.
+
+
+## Batch21 — 원본 간접 CALL 164곳/이전 미해결 59곳 프로비넌스 및 CRT/COM 분리
+- [원본 COM 팩토리, EncodePointer/DecodePointer, CorExitProcess 경로](docs/BATCH21_RUNTIME_INDIRECT.md)
+- [다음 배치 정확한 인수인계·미확인 상태](docs/BATCH21_STATUS.md)
+- [이전 미해결 59곳 공개 주소/정적 역할 목록](analysis/BATCH21_REMAINING59.csv)
+- [원본 DLL SHA·5 API 문자열·2 정적 콜 대상 검증기](tools/batch21_runtime_spotcheck.py)
+- [분석 검증 수치](analysis/BATCH21_SUMMARY.json)
+- 상세 전체 164 opcode/operand 근거 CSV, Batch8 기준선, 원본 전체 static verifier, 신규42 테스트 및 전체419 이전 회귀 로그, Ghidra CALLIND exporter (미실행)는 대화 첨부 Batch21 ZIP (35파일)에 보관. 누적 로컬 461 테스트 통과는 Windows 런타임 동등성 보증 아님. 원본 변경/CI/최적화 없음.

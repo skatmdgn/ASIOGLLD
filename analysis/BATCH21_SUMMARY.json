@@ -1,0 +1,28 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "original_size": 173056,
+  "non_iat_indirect_calls_checked": 164,
+  "prior_static_inferred": 105,
+  "prior_unresolved": 59,
+  "driver_com_factory_triaged": 17,
+  "runtime_support_triaged": 42,
+  "runtime_named_API_or_static_pointer": 6,
+  "runtime_without_fixed_callee": 36,
+  "runtime_provenance_but_dynamic": 17,
+  "runtime_without_even_provenance": 19,
+  "original_static_pointees": {
+    "0x20D38": "0x174B0",
+    "0x20D50": "0x17AC0"
+  },
+  "new_local_tests_passed": 42,
+  "previous_local_tests_passed": 419,
+  "total_local_tests_passed": 461,
+  "skipped": 0,
+  "duplicate_original_ledger_identical": true,
+  "ghidra_run": false,
+  "Windows_original_executed": false,
+  "native_replica_built": false,
+  "parity_verified": false,
+  "ci_runs": 0,
+  "optimizations": 0
+}
