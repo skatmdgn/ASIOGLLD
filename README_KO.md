@@ -118,3 +118,12 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [복원 이어가기 및 미완료 상태](docs/BATCH12_STATUS.md)
 - [부분 의미 Python 모델](tools/batch12_model.py) 및 [원본 바이너리 spotcheck](tools/batch12_spotcheck.py)
 - 19개 메서드/헬퍼 CFG, 206 opcode 핀, 7 direct call, 3 문자열 및 43개 신규 테스트 전체 코드/데이터는 Batch12 ZIP에 포함. 111개 이전 테스트 포함 로컬 154/154 PASS. 동작 동일한 DLL/Ghidra 전체 디컴파일/Windows 동적 검증 미완료. CI/최적화/원본 변경 없음.
+
+
+## Batch13 — 원본 포트 포맷 지원 목록의 생성 및 소멸
+- [장치별 WASAPI 후보 조사·HRESULT 검사·3계층 목록과 파괴 순서](docs/BATCH13_FORMAT_CAPABILITIES.md)
+- [다음 복원 상태 및 미해결 경로](docs/BATCH13_STATUS.md)
+- [원본 SHA/후보 테이블/20개 직접 호출 검사기](tools/batch13_original_audit.py)
+- [후보 포맷 부분 정적 모델](tools/batch13_format_model.py) / [테스트](tests/test_batch13_format_model.py)
+- [C++ x64 계층 구조체 정적 배치 후보](include/batch13_format_tree_layout.hpp)
+- 원본에서 116개 opcode/20개 호출/8개 CFG 구간(323블록,467내부 간선) 검증. 신규 38 + 이전 154 = 총 192 로컬 테스트 통과, 스킵 0. 전체 리포트와 원본 바이트 CSV 및 전체 분석기/코드는 대화의 Batch13 ZIP 참고. 원본 DLL/Ghidra 출력/전용 대체 코드 공개 안 함. CI·최적화 없음.

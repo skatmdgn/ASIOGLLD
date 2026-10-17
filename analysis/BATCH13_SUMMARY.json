@@ -1,0 +1,31 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "code_windows": 8,
+  "basic_blocks": 323,
+  "intra_window_edges": 467,
+  "local_opcode_sites": 116,
+  "direct_call_edges": 20,
+  "format_candidates_hz": [
+    44100,
+    48000,
+    96000
+  ],
+  "candidate_channels": 2,
+  "candidate_mask": 3,
+  "candidate_depth": 16,
+  "node_sizes_bytes": {
+    "snapshot": 64,
+    "frequency": 32,
+    "channel": 32,
+    "depth": 24
+  },
+  "new_local_tests": 38,
+  "regression_tests": 154,
+  "total_local_tests": 192,
+  "skipped": 0,
+  "compiled_original_equivalent_replica": false,
+  "Windows_original_runtime_verified": false,
+  "parity_verified": false,
+  "CI_runs": 0,
+  "optimizations": 0
+}
