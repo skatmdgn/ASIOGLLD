@@ -82,3 +82,12 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [원본 SHA 고정 호출 주소/슬롯 검사기](tools/batch8_validate_static.py)
 - [복원 상태와 미완료 지점](docs/BATCH8_STATUS.md)
 - 비-IAT 간접 호출 164곳 중 기존 30 + 신규 75 = 105곳 정적 이름 후보; 59곳 미해결. 기존 배치 포함 로컬 단위 테스트 35개 통과. CI·최적화·원본 변경 없음. 전체 호출 JSON과 강화된 분석 소스는 별도 Batch8 ZIP에 제공.
+
+
+## Batch 9 — 최종 59개 미해결 간접 호출 정적 분류 / 팩토리 수명 복원
+- [CClassFactory 원본 CreateInstance/참조 수명](docs/BATCH9_FACTORY_LIFECYCLE.md)
+- [남은 59개 호출 분석 및 정적 판정 한계](docs/BATCH9_LAST59_TRIAGE.md)
+- [RVA·원본 바이트 59곳](analysis/BATCH9_LAST59.csv) / [팩토리 핵심 18곳](analysis/BATCH9_FACTORY_PINS.csv)
+- [재현 가능한 원본 읽기 전용 검사기](tools/batch9_verify_original.py)
+- [이어가기·미완료 목록](docs/BATCH9_STATUS.md)
+- 상세 164개 통합 목록, 원본 바이트 23개 핀, 정적 COM 모델 및 신규 테스트 13개는 별도 Batch9 ZIP에 보관. 누적 48개 로컬 검사 통과는 기능 동등성 보증 아님. CI/최적화/원본 수정 없음.

@@ -1,0 +1,17 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "noniat_total": 164,
+  "previous_static_candidates": 105,
+  "stage9_driver_related": 17,
+  "stage9_runtime_support_like": 42,
+  "stage9_opcode_signatures_verified": 59,
+  "stage9_factory_semantic_pins_full_local": 23,
+  "github_factory_pin_subset": 18,
+  "new_local_tests": 13,
+  "prior_regression": 35,
+  "total_local_tests": 48,
+  "windows_runtime_parity": false,
+  "replica_exists": false,
+  "CI_runs": 0,
+  "optimization_changes": 0
+}
