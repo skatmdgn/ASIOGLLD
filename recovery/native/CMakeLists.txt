@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.15)
+project(asio_original_runtime_pure_contract LANGUAGES CXX)
+# Pure native building block; intentionally NO ASIO DLL, COM registration, WASAPI or optimizations.
+add_executable(batch23_native_runtime_contract tests/native_runtime_contract.cpp)
+target_include_directories(batch23_native_runtime_contract PRIVATE include)
+target_compile_features(batch23_native_runtime_contract PRIVATE cxx_std_17)
+enable_testing()
+add_test(NAME original_runtime_contract COMMAND batch23_native_runtime_contract)
+add_executable(batch23_native_pcm_contract tests/native_pcm_contract.cpp)
+target_include_directories(batch23_native_pcm_contract PRIVATE include)
+target_compile_features(batch23_native_pcm_contract PRIVATE cxx_std_17)
+add_test(NAME original_pcm_contract COMMAND batch23_native_pcm_contract)
+# Synthetic test-only invocation bridge, not an audio application or driver.
+add_executable(batch23_pcm_cross_model_cli tests/native_pcm_cli.cpp)
+target_include_directories(batch23_pcm_cross_model_cli PRIVATE include)
+target_compile_features(batch23_pcm_cross_model_cli PRIVATE cxx_std_17)

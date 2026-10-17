@@ -1,0 +1,28 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "original_bytes": 173056,
+  "unknown_final_runtime_callees": 13,
+  "original_call_origin_evidence_pins": 55,
+  "direct_call_links": 8,
+  "source_class_counts": {
+    "EH_IMAGE_RELATIVE_ZERO_EXTENDED": 2,
+    "EH_THREAD_CALLBACK_TABLE": 2,
+    "CRT_DECODED_POINTER": 2,
+    "CRT_THREAD_STATE_FUNCTION_POINTER": 2,
+    "EH_RECORD_IMAGE_RELATIVE": 1,
+    "EH_TLS_IMAGE_BASE_RELATIVE": 3,
+    "CRT_CALLER_ARGUMENT_PASSTHROUGH": 1
+  },
+  "new_python_tests_passed": 34,
+  "prior_python_regressions_passed": 506,
+  "all_python_tests_passed": 540,
+  "skipped": 0,
+  "native_ctest_executables_passed": 2,
+  "Cpp_vs_Python_pcm_semantic_cases_matched": 336,
+  "Windows_original_executed": false,
+  "faithful_ASIO_DLL_complete": false,
+  "ghidra_run": false,
+  "runtime_parity": false,
+  "CI_runs": 0,
+  "optimizations": 0
+}

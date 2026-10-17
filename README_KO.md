@@ -192,3 +192,11 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [원본 x64 ABI 후보 C++ 함수포인터 선언](include/batch22_original_win32_types.hpp)
 - [506개 로컬 검사 수치와 한계](analysis/BATCH22_SUMMARY.json)
 - 원본 164개 CALL 전수, 6 dynamic API 전체 원본 데이터 사슬과 corrected 164-row CSV, 45 신규+461 이전 테스트, 2개 원본 DLL 산출물 동일성, 전체 검증 코드와 로그는 대화의 Batch22 ZIP(41 files)에 있음. 원본 DLL/전체 디스어셈블은 공개 저장소에 없음. Win64 동작 패리티·CI·최적화 없음.
+
+
+## Batch23: 원본 CRT/EH 13 indirect CALL 출처 복원 + 최초 C++ 네이티브 PCM 동작 모듈
+- [13개 원본 간접 호출 포인터 출처·0확장 vs 부호확장](docs/BATCH23_RUNTIME_ORIGINS.md)
+- [C++ 정상 입력 PCM·Win64 EH 부분 계약과 한계](docs/BATCH23_NATIVE_SOURCE.md)
+- [다음 세션 복원 재개 체크포인트](docs/BATCH23_STATUS.md)
+- [직접 빌드되는 C++17 소스](recovery/native/include/original_pcm_contract.hpp) / [CRT·EH ABI 후보](recovery/native/include/original_runtime_callback_contract.hpp) / [CMake](recovery/native/CMakeLists.txt)
+- 새 Python 34 + 기존 506 = **540/540 정적/모델 검사 통과, skipped 0**. CTest native 2개 + C++↔Batch11 Python 모델 336 inputs pass. 원본 DLL은 실제 실행하지 않음. 완전한 ASIO DLL이나 Windows parity가 아님. 상세 재현 분석 코드·55 opcode 위치·48파일 ZIP은 대화 첨부에 보존. CI/최적화/원본 수정 없음.
