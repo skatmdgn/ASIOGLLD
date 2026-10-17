@@ -99,3 +99,14 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [원본 동작 누적 마스크 모델](tools/batch10_worker_model.py) 및 [단위 테스트](tests/test_batch10_worker.py)
 - [재개용 상태문서](docs/BATCH10_STATUS.md)
 - 전체 CFG(131KB), 75개 원본 opcode 핀, 91개 호출 인덱스와 29개 신규 테스트는 대화 첨부 Batch10 ZIP에 포함. 이전 배치 48개 재검사 포함 로컬 77개 통과. 동적 Windows 검증·동등한 DLL·CI·최적화는 아직 없음.
+
+
+## Batch 11 — 원본 PCM·ASIO 클록 심층 복원 (CI 보류)
+- [PCM/링 버퍼/클록 원본 함수별 복원 명세](docs/BATCH11_PCM_CLOCK.md)
+- [이어가기/미해결 기능 체크포인트](docs/BATCH11_STATUS.md)
+- [PCM 일부 경로 정적 모델](tools/batch11_pcm_model.py) / [시간 계산 모델](tools/batch11_clock_model.py)
+- [원본 SHA/핵심 명령어/직접 호출/시간 상수 확인](tools/batch11_original_checks.py)
+- [x64 버퍼 구조체 후보 offset assertions](include/batch11_layout_candidates.hpp)
+- [기계가 읽을 수 있는 검증 결과](analysis/BATCH11_SUMMARY.json)
+
+상세한 124개 명령어 바이트/6개 호출/3개 원본 상수 대조표와 34개 신규 테스트, 기존 77개 회귀 검사 전체 기록은 이 대화의 ASIOGLLD_Original_Recovery_Batch11.zip에 있다. 원본과 재현 DLL 간 동작 검증은 아직 전혀 하지 않았다. 최적화와 CI는 0회.

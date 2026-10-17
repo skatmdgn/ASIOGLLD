@@ -1,0 +1,17 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "original_size_bytes": 173056,
+  "full_companion_opcode_pins_verified": 124,
+  "direct_calls_verified": 6,
+  "double_constants_verified": 3,
+  "new_local_tests_passed": 34,
+  "previous_regression_tests_passed": 77,
+  "local_tests_executed_and_passed": 111,
+  "skipped_tests": 0,
+  "cpp_layout_assertions_compiled": true,
+  "original_runtime_tested": false,
+  "replica_built": false,
+  "parity_verified": false,
+  "CI_runs": 0,
+  "optimizations": 0
+}
