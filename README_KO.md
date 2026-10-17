@@ -91,3 +91,11 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [재현 가능한 원본 읽기 전용 검사기](tools/batch9_verify_original.py)
 - [이어가기·미완료 목록](docs/BATCH9_STATUS.md)
 - 상세 164개 통합 목록, 원본 바이트 23개 핀, 정적 COM 모델 및 신규 테스트 13개는 별도 Batch9 ZIP에 보관. 누적 48개 로컬 검사 통과는 기능 동등성 보증 아님. CI/최적화/원본 수정 없음.
+
+
+## Batch 10 — 원본 작업 스레드 / 제어 흐름 (로컬 대량 분석 후 한 번 반영)
+- [원본 폴링/ASIO 더블버퍼/프리롤/정지 원리](docs/BATCH10_WORKER_CONTROL_FLOW.md)
+- [원본 함수 구간 12개, 기본 블록 351개, 분기 연결 512개](docs/BATCH10_CFG_INVENTORY.md)
+- [원본 동작 누적 마스크 모델](tools/batch10_worker_model.py) 및 [단위 테스트](tests/test_batch10_worker.py)
+- [재개용 상태문서](docs/BATCH10_STATUS.md)
+- 전체 CFG(131KB), 75개 원본 opcode 핀, 91개 호출 인덱스와 29개 신규 테스트는 대화 첨부 Batch10 ZIP에 포함. 이전 배치 48개 재검사 포함 로컬 77개 통과. 동적 Windows 검증·동등한 DLL·CI·최적화는 아직 없음.

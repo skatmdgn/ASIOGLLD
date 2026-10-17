@@ -1,0 +1,17 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "code_windows": 12,
+  "basic_blocks": 351,
+  "intra_window_edges": 512,
+  "call_positions_in_windows": 91,
+  "static_byte_sites_verified": 75,
+  "iasio_vtable_slots_verified": 24,
+  "tests_new_passed": 29,
+  "prior_regression_passed": 48,
+  "total_local_tests_passed": 77,
+  "original_windows_runtime_verified": false,
+  "faithful_replica_built": false,
+  "parity_verified": false,
+  "CI_runs": 0,
+  "optimization_changes": 0
+}
