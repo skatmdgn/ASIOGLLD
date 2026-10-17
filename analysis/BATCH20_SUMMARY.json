@@ -1,0 +1,38 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "original_size": 173056,
+  "unwind_records": 590,
+  "unwind_roots": 369,
+  "indirect_jump_sites_recovered": 7,
+  "table_selector_cases": 274,
+  "global_distinct_targets": 45,
+  "source_target_edges": 51,
+  "prior_physical_cfg": {
+    "blocks": 6331,
+    "edges": 8807,
+    "unresolved_indirect_jumps": 7
+  },
+  "recovered_physical_cfg": {
+    "blocks": 6334,
+    "edges": 8861,
+    "unresolved_indirect_jumps": 0
+  },
+  "gap_direct_call_targets": 67,
+  "gap_incoming_calls": 340,
+  "gap_entry_type_counts": {
+    "IAT_import_thunk": 11,
+    "direct_tail_transfer": 15,
+    "short_return_leaf": 10,
+    "other_unwindless_helper_or_entry": 31
+  },
+  "new_local_tests_passed": 32,
+  "previous_regression_passed": 387,
+  "all_local_tests_passed": 419,
+  "skipped_tests": 0,
+  "duplicate_original_six_outputs_identical": true,
+  "ghidra_complete_run": false,
+  "native_replica_built": false,
+  "windows_runtime_parity": false,
+  "CI_runs": 0,
+  "optimization_changes": 0
+}

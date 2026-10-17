@@ -166,3 +166,11 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [오리지널 SHA 고정 Python stdlib unwind 검증기](tools/batch19_original_unwind_check.py)
 - [재현 가능한 통계 및 제한사항](analysis/BATCH19_SUMMARY.json)
 - 전체 590-segment·369-root·2,946 call/jmp 근거와 Ghidra exporter/bridge, 30 신규 및 357 기존 회귀 로그는 대화의 Batch19 ZIP (39개 파일). 387/387 로컬 검사 통과와 Windows 실제 원본·복제 실행 동등성은 별개. CI·최적화·원본 수정 0.
+
+
+## Batch20 — 원본 7개 미해결 간접 JMP 테이블·전체 CFG 수정
+- [원본 7개 switch table: 274 case, 45 목표, 51 edge 및 590 unwind 구간 CFG 변경](docs/BATCH20_JUMP_TABLE_RECOVERY.md)
+- [현재 상태·이어서 작업할 순서](docs/BATCH20_STATUS.md)
+- [Python stdlib만으로 원본 SHA·7개 점프 테이블 재검증](tools/batch20_jump_table_spotcheck.py)
+- [검증 수치 및 미완료](analysis/BATCH20_SUMMARY.json)
+- 상세 도구, 274-row target CSV, 590-row CFG, 67 gap-call-target CSV, 32신규 + 387기존 테스트는 이 대화의 Batch20 ZIP(37 파일)에 있음. **419/419 local tests, no skips**. Ghidra 전체 실행/원본·복제 Windows parity/CI/최적화 모두 미실행. 원본 DLL 변형 없음.
