@@ -183,3 +183,12 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [원본 DLL SHA·5 API 문자열·2 정적 콜 대상 검증기](tools/batch21_runtime_spotcheck.py)
 - [분석 검증 수치](analysis/BATCH21_SUMMARY.json)
 - 상세 전체 164 opcode/operand 근거 CSV, Batch8 기준선, 원본 전체 static verifier, 신규42 테스트 및 전체419 이전 회귀 로그, Ghidra CALLIND exporter (미실행)는 대화 첨부 Batch21 ZIP (35파일)에 보관. 누적 로컬 461 테스트 통과는 Windows 런타임 동등성 보증 아님. 원본 변경/CI/최적화 없음.
+
+
+## Batch 22 — 원본 동적 Windows API 간접 호출 데이터 흐름 복원
+- [GetProcAddress→EncodePointer→캐시→DecodePointer→CALL: Win32 API 6개 및 fallback 원본 RVA](docs/BATCH22_DYNAMIC_WIN32_API.md)
+- [다음 배치 인수인계: 13개 미확정 런타임 간접 CALL, Ghidra/Windows 미검증](docs/BATCH22_STATUS.md)
+- [원본 SHA 및 6 API/문자열/RIP 주소 독립 검증 도구](tools/batch22_original_api_spotcheck.py)
+- [원본 x64 ABI 후보 C++ 함수포인터 선언](include/batch22_original_win32_types.hpp)
+- [506개 로컬 검사 수치와 한계](analysis/BATCH22_SUMMARY.json)
+- 원본 164개 CALL 전수, 6 dynamic API 전체 원본 데이터 사슬과 corrected 164-row CSV, 45 신규+461 이전 테스트, 2개 원본 DLL 산출물 동일성, 전체 검증 코드와 로그는 대화의 Batch22 ZIP(41 files)에 있음. 원본 DLL/전체 디스어셈블은 공개 저장소에 없음. Win64 동작 패리티·CI·최적화 없음.
