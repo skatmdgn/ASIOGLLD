@@ -74,3 +74,11 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [원본 분기 정적 모델 테스트](tests/test_batch7_original.py)
 - [Batch 7 수치와 검증 상태 JSON](analysis/BATCH7_SUMMARY.json)
 - 전체 164개 호출 주소와 호출 포인터 역추적 결과, Linux에서 검증한 Python 도구, 안전장치가 있는 미실행 Windows COM 테스트 소스는 Batch 7 별도 분석 ZIP에 보관. 기존 DLL 무변경, 최적화·CI 0회.
+
+
+## Batch 8 — 원본 간접 호출/COM 수명 역공학
+- [원본 장치 열거·알림·버퍼/클록 수명 및 오류 경로](docs/BATCH8_COM_DISPATCH.md)
+- [간접 호출 신규 정적 식별 75곳의 원본 RVA/슬롯/객체 로드 근거](analysis/BATCH8_NEW_CALLS.csv)
+- [원본 SHA 고정 호출 주소/슬롯 검사기](tools/batch8_validate_static.py)
+- [복원 상태와 미완료 지점](docs/BATCH8_STATUS.md)
+- 비-IAT 간접 호출 164곳 중 기존 30 + 신규 75 = 105곳 정적 이름 후보; 59곳 미해결. 기존 배치 포함 로컬 단위 테스트 35개 통과. CI·최적화·원본 변경 없음. 전체 호출 JSON과 강화된 분석 소스는 별도 Batch8 ZIP에 제공.

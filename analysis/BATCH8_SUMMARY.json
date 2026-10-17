@@ -1,0 +1,19 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "non_iat_indirect": 164,
+  "previously_static_named": 30,
+  "new_static_named": 75,
+  "total_static_named": 105,
+  "unresolved": 59,
+  "local_tests": {
+    "batch6": 11,
+    "batch7": 9,
+    "stage5": 4,
+    "batch8": 11,
+    "total": 35
+  },
+  "ci_runs": 0,
+  "optimizations": 0,
+  "windows_runtime_parity": false,
+  "replica_built": false
+}
