@@ -1,0 +1,18 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "indirect_calls": 643,
+  "iat_calls": 479,
+  "non_iat_calls": 164,
+  "statically_named_positions": 30,
+  "unresolved_indirect_call_positions": 134,
+  "new_original_opcode_matches": "30/30",
+  "new_IAT_matches": "3/3",
+  "prior_local_tests_passed": 15,
+  "batch7_local_tests_passed": 9,
+  "entire_original_source_recovered": false,
+  "compiled_replica": false,
+  "windows_runtime_verified": false,
+  "parity_verified": false,
+  "optimization": false,
+  "CI_run": false
+}

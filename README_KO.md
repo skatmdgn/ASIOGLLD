@@ -65,3 +65,12 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [전체 함수·간접 호출 커버리지와 미확인 사항](docs/BATCH6_COVERAGE.md)
 - [읽기 전용 원본 검증 스크립트](tools/batch6_verify_original.py)
 - 별도 배포 Batch 6 ZIP에는 전체 함수/점프/간접 호출 JSON, 본격 분석 도구, 11개 로컬 테스트가 포함됨. 아직 Windows 런타임 동등성/복제 DLL 없음. CI 반복 실행은 보류.
+
+
+## Batch 7 — 대량 역공학 (CI 보류, 마지막에 일괄 커밋)
+- [원본 WASAPI 공유/독점 Initialize 분기·클록·COM 수명·간접 호출 근거](docs/BATCH7_ORIGINAL_WASAPI.md)
+- [이어가기 상태와 미완료 목록](docs/BATCH7_STATUS.md)
+- [원본 바이트/IAT 검증 및 초기화 인수 분석 코드](tools/batch7_original_wasapi.py)
+- [원본 분기 정적 모델 테스트](tests/test_batch7_original.py)
+- [Batch 7 수치와 검증 상태 JSON](analysis/BATCH7_SUMMARY.json)
+- 전체 164개 호출 주소와 호출 포인터 역추적 결과, Linux에서 검증한 Python 도구, 안전장치가 있는 미실행 Windows COM 테스트 소스는 Batch 7 별도 분석 ZIP에 보관. 기존 DLL 무변경, 최적화·CI 0회.
