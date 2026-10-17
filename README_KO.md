@@ -45,3 +45,6 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [코드 타깃 커버리지](docs/COVERAGE_LEDGER_STAGE4.md): 590개 unwind 범위, 305개 직접 CALL 타깃, unwind 외부 67개 후보.
 - [로컬 재검증 도구](tools/recovery_v4.py): Python3 + GNU objdump, 원본 읽기 전용, 23 opcode 서명 확인.
 - 결과는 모두 정적 근거이며 **완전 복원이나 성능 개선의 증거는 아닙니다.**
+
+- [원본 COM CLSID·클래스 팩토리·객체 크기](docs/ORIGINAL_COM_FACTORY.md): GUID와 3가지 실패 반환 코드 확인.
+- [원본 COM 바이트 검증기](tools/verify_com_factory.py): 원본 SHA 고정, GUID/객체 할당/오류 코드 9곳 대조.
