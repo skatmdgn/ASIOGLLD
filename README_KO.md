@@ -1,36 +1,19 @@
-# ASIOGLLD 원본 역공학 프로젝트
+# ASIOGLLD — 원본 역공학 및 완전 재현 우선
 
-원본 DLL 기반 기능/구조 복원을 먼저 진행합니다. Cubase 8.0.40 재생 안정화가 최종 목표이며, **유튜브와 Cubase 동시 재생을 위해 WASAPI 공유 모드를 필수 조건**으로 유지합니다.
+**첫 목표: 기존 asioglld.dll의 모든 확인 가능한 내부 로직과 기능을 최대한 빠짐없이 복원하고, 원본과 동일한 동작을 하는 구현을 만든 후 차등 검증한다. 최적화는 그다음이다.**
 
-## 현재 성과
+- [최상위 복원 규칙](docs/PHASE1_ORIGINAL_PARITY_KO.md)
+- [상세 단계](docs/RECOVERY_PLAN.md)
+- [원본 동등성 체크리스트](docs/ORIGINAL_PARITY_MATRIX.md)
+- [현재 상태와 미완료 항목](docs/STATUS.md)
+- [ASIO vtable 분석](docs/ASIO_VTABLE.md)
+- [WASAPI GUID 참조](docs/WASAPI_GUID_MAP.md)
+- [원본 호출 경로](docs/CONTROL_FLOW.md)
+- [FlexASIO 비교: 참고자료일 뿐](docs/FLEXASIO_COMPARISON.md)
 
-- 두 번 업로드된 DLL의 SHA-256이 같음을 검증했습니다.
-- x64 PE 함수·외부 API·정적 호출 관계를 수집했습니다.
-- RTTI 기반으로 `CAsio`의 ASIO 메서드 24개 엔트리를 원본 RVA에 연결했습니다.
-- `CClassFactory`, `CMMAudioPort`, `CNotificationClient` 등 객체를 식별했습니다.
-- WASAPI `IAudioClient`, `IAudioRenderClient`, `IAudioCaptureClient`, `IAudioClock` GUID와 참조 위치를 식별했습니다.
-- 아직 **원본 소스 전체 복원, Cubase 드롭아웃 원인 규명, 바이너리 수정, 성능 개선 검증은 미완료**입니다.
+## 현재 상태
+PE/RTTI 및 일부 함수 주소와 호출 관계까지 확보했지만, 원본 소스 전체, 모든 분기, 런타임 상태 전이 및 재현 구현의 동등성은 **미확인**이다. Ghidra 디컴파일은 근거 자료이지 원본 C++을 그대로 재생성한 결과가 아니다.
 
-분석 근거: [ASIO VTable](docs/ASIO_VTABLE.md), [WASAPI GUID](docs/WASAPI_GUID_MAP.md), [내부 호출](docs/CONTROL_FLOW.md), [진행 상태](docs/STATUS.md).
+Cubase Pro 8.0.40에서 유튜브 동시 재생하는 공유 모드가 우선 사용환경이지만, **복원 목표에는 원본 독점 모드/입력/설정/오류 경로도 전부 포함한다**.
 
-## 정적 분석 재현
-
-```sh
-python tools/pe_inventory.py "D:\\path\\asioglld.dll"
-```
-
-실행은 읽기 전용이며 원본 DLL을 변경하지 않습니다.
-
-## Ghidra 전체 함수 디컴파일 시도
-
-1. 공식 Ghidra 설치 및 필요한 JDK 준비: https://github.com/NationalSecurityAgency/ghidra/releases
-2. 원본 `asioglld.dll`을 이 프로젝트 아래 `original/asioglld.dll`로 복사 (원본은 GitHub에 업로드하지 않음).
-3. Windows CMD에서 `set "GHIDRA_HOME=D:\\your-ghidra-folder"`로 경로 설정.
-4. `tools\ghidra\RUN_GHIDRA_WINDOWS.cmd` 실행.
-5. `local_output\decompiled\SUMMARY.txt` 및 `functions.tsv` 확인.
-
-스크립트는 원본 SHA-256을 검사하고 지정된 로컬 출력 폴더에 디컴파일 결과를 기록합니다. **아직 실제 Windows Ghidra 컴파일/실행 검증 전**입니다. 오류가 발생하면 먼저 오류 메시지를 확인하고 스크립트부터 수정해야 합니다.
-
-전체 디컴파일 출력은 저작권과 라이선스 문제를 고려해 **공개 GitHub에 올리지 않고 로컬에 보관**하세요. 원본과 연결된 재현 가능한 분석 문서 및 직접 작성한 코드만 GitHub에 유지합니다.
-
-공개 GitHub 경로: https://github.com/skatmdgn/ASIOGLLD
+Windows Ghidra 자동화 설명: [DECOMPILER_STAGE.md](docs/DECOMPILER_STAGE.md). 원본 DLL은 로컬에서만 처리하며 공개 GitHub에 올리지 않는다.

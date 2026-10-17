@@ -1,28 +1,22 @@
-# Project status and continuity note
+# Project status — 2026-10-17
 
-## Done
-- Verified that the duplicate user-uploaded DLL and original had identical SHA-256.
-- Original stays unmodified; duplicated working copy not needed.
-- Created this GitHub project and documented user requirement: Cubase 8.0.40 *with YouTube audio concurrently*, therefore WASAPI **shared** mode.
-- Derived 590 unwind function ranges, 148 imports, 33,194 decoded disassembly instruction rows, 983 static direct-call edges, 11 vtable pointer-run candidates in first pass (only RTTI-linked runs accepted as strong candidates).
-- Identified RTTI-backed CAsio IASIO vtable (24 slots), class factory, port and device notification classes.
-- Mapped core method call chain and partial CAsio field offsets in `CONTROL_FLOW.md`.
+## USER'S ABSOLUTE PRIORITY
+FIRST reverse engineer and reproduce the existing original asioglld.dll **as faithfully and completely as possible**, without optimization. ONLY AFTER tested original parity and explicit user approval consider Phase 2 performance changes. No limited shared-mode ASIO rewrite as substitute for original restoration.
 
-## Not done
-- No complete source reconstruction.
-- No debugger-backed verification of indirect COM calls, WASAPI data path or ASIO bufferSwitch invocation.
-- No binary patch and no verified performance improvement.
-- No Windows x64 runtime testing of the recovery scripts in this repo.
+Authoritative: PHASE1_ORIGINAL_PARITY_KO.md, RECOVERY_PLAN.md, ORIGINAL_PARITY_MATRIX.md.
 
-## Artifacts
-- `tools/pe_inventory.py` regenerates PE import/export/unwind/RTTI candidate inventory from a local DLL. Original DLL bytes should not be committed.
-- Full first-pass static call graph and disassembly-derived mapping are available in the companion downloadable analysis ZIP from the working conversation. Reproducible analysis uses `objdump` and the local original.
-- `docs/ASIO_VTABLE.md`: high-confidence ABI slot map.
-- `docs/ARCHITECTURE.md`: evidence and uncertainty.
-- `docs/FLEXASIO_COMPARISON.md`: external reference and distinctions.
-- `docs/RECOVERY_PLAN.md`: next steps and stopping conditions.
+## Static work reported so far
+- User original/duplicate SHA-256 identical; original preserved.
+- First pass: 590 unwind ranges, 148 imports, 33,194 disassembly rows, 983 direct-call edges, 11 pointer-run vtable candidates.
+- CAsio IASIO vtable slots mapped and WASAPI GUID references identified.
+- Partial original method control flow and class state offsets recorded in CONTROL_FLOW.md.
 
-## Immediate next implementation
-Reconstruct the body of 0x8FC0 and the 0x92B0/0x97B0/0x94B0 call cluster; identify actual WASAPI shared-mode buffer write and ASIO callback deadlines. Preserve byte-level evidence for every proposed function name and every COM interface guess.
+## Not yet done
+- Exhaustive function/branch/indirect-call graph and field semantics.
+- Full ASIO and shared/exclusive WASAPI behavior map, original dynamic traces.
+- Working full-fidelity replica, comparisons and parity sign-off.
+- **NO ORIGINAL-BASED OPTIMIZATION PERMITTED YET.**
 
-Never make undocumented changes to the installed Steinberg DLL.
+## Next
+Finish/validate Windows Ghidra decompilation; maintain per-function unknowns; reconstruct original branches, error handling and data paths; trace original runtime; only then reproduce same algorithms and compare.
+Never overwrite the original or commit proprietary DLL bytes.
