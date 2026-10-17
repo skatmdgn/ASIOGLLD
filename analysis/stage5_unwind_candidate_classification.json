@@ -1,0 +1,346 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "full_text_direct_call_targets": 305,
+  "unwind_entries": 590,
+  "notes": [
+    "static call target classification, not decompilation",
+    "indirect and jump-dispatched targets excluded"
+  ],
+  "targets": [
+    {
+      "rva": "0x1000",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x16a0",
+      "kind": "RETURN_ONLY_STUB_CANDIDATE",
+      "import_name": null
+    },
+    {
+      "rva": "0x23f0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x24c0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x2cb0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x2cd0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x2cf0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x5fa0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x8cf0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x9990",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xa830",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xb280",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xb310",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xc2fe",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "GetFileVersionInfoSizeA"
+    },
+    {
+      "rva": "0xc304",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "VerQueryValueA"
+    },
+    {
+      "rva": "0xc30a",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "GetFileVersionInfoA"
+    },
+    {
+      "rva": "0xc310",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "AvQuerySystemResponsiveness"
+    },
+    {
+      "rva": "0xc316",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "AvSetMmThreadCharacteristicsA"
+    },
+    {
+      "rva": "0xc31c",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "AvRevertMmThreadCharacteristics"
+    },
+    {
+      "rva": "0xc322",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "AvSetMmThreadPriority"
+    },
+    {
+      "rva": "0xc370",
+      "kind": "JUMP_STUB_OR_TAIL_DISPATCH",
+      "import_name": null
+    },
+    {
+      "rva": "0xc4e0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xc520",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xc5f0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xc610",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xcaf0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xd6d0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xd7c0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xdad0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xf1e0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xf3a0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xf550",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xf560",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xf860",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0xf870",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x10990",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x10a60",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x10a80",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x10d50",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x114d0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x117e0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x11880",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x126e0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x132b0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x134a0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x134f0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x13590",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x13a40",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x13a70",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x13bb0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x13bc0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x13fa0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x14320",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x14350",
+      "kind": "RETURN_ONLY_STUB_CANDIDATE",
+      "import_name": null
+    },
+    {
+      "rva": "0x15430",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x15680",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x15a40",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x15dd0",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x16a30",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x16c86",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "RtlPcToFileHeader"
+    },
+    {
+      "rva": "0x16c8c",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "RtlVirtualUnwind"
+    },
+    {
+      "rva": "0x16c92",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "RtlLookupFunctionEntry"
+    },
+    {
+      "rva": "0x16c98",
+      "kind": "IAT_IMPORT_THUNK",
+      "import_name": "RtlUnwindEx"
+    },
+    {
+      "rva": "0x17700",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x17b30",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x1a200",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    },
+    {
+      "rva": "0x1a210",
+      "kind": "UNRESOLVED_LEAF_OR_HELPER",
+      "import_name": null
+    }
+  ]
+}

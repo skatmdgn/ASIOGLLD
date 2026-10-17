@@ -64,3 +64,12 @@ Never overwrite the original or commit proprietary DLL bytes.
 - Confirmed COM factory allocation 0x18 bytes, original CAsio allocation 0xD0, and DllGetClassObject primary error paths. tools/verify_com_factory.py: 9/9 passes against original.
 - DllCanUnloadNow references 0x27AB0 and 0x27AA4 counters; full object lifetime still unresolved.
 - UI document corrected IDs 1109/1110 to raw Windows LISTBOX ordinal 131 (not SysListView32).
+
+## Phase 1 Stage 5 — registry and UI message dispatch; leaf triage
+
+- Read-only original hash checked; 30/30 registry/UI opcode signatures match original; buffer table [10,50,100] matches; local full auditor independently verifies 11/11 PE import names.
+- Corrected older misnaming `RegOpenKeyExA` to actual imported `RegOpenKeyA`, with `RegCreateKeyA` fallback; generic config root is HKCU Software\\ASIO\\Generic Low Latency ASIO Driver.
+- Identified original dialog handler 0xB6D0, WM_DRAWITEM (0x2B), WM_INITDIALOG (0x110), WM_COMMAND (0x111), WM_VSCROLL (0x115), control IDs 1/2/1086/1092/1090, and user-defined range 10–100 or preset [10,50,100].
+- Full .text virtual size ends at RVA 0x1D0BA; 305 distinct direct call targets. Previous 304 came from an incorrect <0x1D000 cutoff (omitted 0x1D050).
+- 67 direct targets outside unwind: 11 resolved PE import thunks, 2 ret stubs, 1 internal jump stub, 53 unresolved candidates. See `docs/UNWIND_LEAF_TRIAGE_STAGE5.md`.
+- Remaining: exact registry failure semantics, UI handlers and persistence, all indirect COM paths, all original functions, Ghidra/Windows runtime, faithful replica and differential parity. NO optimization.

@@ -31,3 +31,6 @@ There are further per-port strings: `ExclusiveModeChannels` 0x20450, `SharedMode
 ## Remaining
 
 Reconstruct per-device settings selection and validation; registry failure fallback; GUI-event mapping and settings change application; exact buffer-duration units; every shared/exclusive and capture/render state. Preserve original semantics even when behavior appears unusual.
+
+
+**Stage 5 verified correction:** `0x66B0` formats `Software\\ASIO\\Generic Low Latency ASIO Driver` under **HKEY_CURRENT_USER**; original IAT imports are **RegOpenKeyA** at 0x1E008 and **RegCreateKeyA** at 0x1E010, with value APIs RegQueryValueExA 0x1E020 and RegSetValueExA 0x1E028. See ORIGINAL_REGISTRY_UI_STAGE5.md.

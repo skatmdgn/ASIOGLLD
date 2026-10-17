@@ -48,3 +48,10 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 
 - [원본 COM CLSID·클래스 팩토리·객체 크기](docs/ORIGINAL_COM_FACTORY.md): GUID와 3가지 실패 반환 코드 확인.
 - [원본 COM 바이트 검증기](tools/verify_com_factory.py): 원본 SHA 고정, GUID/객체 할당/오류 코드 9곳 대조.
+
+
+## Stage 5: 원본 설정창/레지스트리와 누락 함수 분류
+- [레지스트리 루트 및 대화상자 메시지 분기](docs/ORIGINAL_REGISTRY_UI_STAGE5.md)
+- [67개 예외정보 외부 직접 호출의 분류](docs/UNWIND_LEAF_TRIAGE_STAGE5.md)
+- [설정/UI 정적 검증 스크립트](tools/verify_registry_ui_stage5.py)
+- 검증된 원본 명령어 30/30, 레지스트리/GUI API import 11/11, preset [10,50,100]. 동등성 구현/최적화는 아직 없음.
