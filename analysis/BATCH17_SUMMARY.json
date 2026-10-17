@@ -1,0 +1,18 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "code_windows": 6,
+  "basic_blocks": 123,
+  "intra_window_edges": 190,
+  "opcode_operand_checks": 61,
+  "direct_calls": 4,
+  "iat_calls": 6,
+  "local_new_tests_passed": 29,
+  "local_previous_tests_passed": 293,
+  "total_local_tests_passed": 322,
+  "skipped": 0,
+  "original_windows_executed": false,
+  "replica_built": false,
+  "parity_verified": false,
+  "ci_runs": 0,
+  "optimization_changes": 0
+}

@@ -143,3 +143,10 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [정상 조건 일부의 정적 Worker 상태 모델](tools/batch16_worker_lifetime_model.py)
 - [검증 수치/미완료 상태 JSON](analysis/BATCH16_SUMMARY.json)
 - 자세한 기계어 307곳·64 피연산자·11 직접 호출·10 IAT 호출·10 CFG·293개 로컬 실행 검사 기록 및 Win64 C++ 레이아웃은 이 대화의 별도 Batch16 ZIP에 제공. 원본 DLL·전체 디스어셈블은 공개 저장소에 올리지 않음. 원본 수정 0, CI 0, 최적화 0. 재현 DLL/원본 실행 동등성 검증 미완료.
+
+
+## Batch17 — 원본 ASIO API 성공 반환과 스레드 생성 실패 상태 연결
+- [createBuffers/WorkerPrepare/start/TimeInfo/WorkerStop 정적 실패 경로](docs/BATCH17_FAILURE_PROPAGATION.md)
+- [현재 복원 상태와 필수 다음 단계](docs/BATCH17_STATUS.md)
+- [정적 검증 총괄](analysis/BATCH17_SUMMARY.json)
+- 전체 Python 정적 분석기, 61 원본 opcode 근거, 6개 CFG, 322개 로컬 테스트 결과 및 후보 구조체는 별도 Batch17 ZIP에 포함. 원본 Windows 실행·복원 DLL 패리티·CI·최적화 미완료.
