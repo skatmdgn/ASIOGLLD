@@ -42,3 +42,9 @@ Never overwrite the original or commit proprietary DLL bytes.
 - Verified 30/30 opcode/pointer or control-flow sites against the original SHA. Source: `docs/ASIO_CALLBACK_PIPELINE.md`, `tools/verify_callback_bytes.py`.
 - Found the conditional initial 2-buffer pre-roll path and all-ports-mask gating before ASIO callback. Recovered limited worker object fields and timeInfo.flags=7.
 - No original runtime debugger tracing or fully reconstructed code or replica parity yet. No optimization.
+
+## Stage 3b: original IASIO response semantics
+- Confirmed via instruction and 13 file-byte checks: getChannels (0x1910) returns object+0x48 / +0x4C; getLatencies (0x1930) returns twice object+0x3C for both directions; getSampleRate (0x1AA0) converts positive object+0x44 to double.
+- Confirmed getBufferSize (0x1C50) copies positive object+0x3C to **min, max, preferred AND granularity**; do not silently 'correct' this unusual original behavior during reproduction.
+- getDriverVersion (0x1690) directly returns object+0x9C.
+- Method details and error branches: docs/IASIO_BASIC_METHODS.md. No runtime original/replica parity yet.

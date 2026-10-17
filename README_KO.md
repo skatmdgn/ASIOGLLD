@@ -27,3 +27,13 @@ Windows Ghidra 자동화 설명: [DECOMPILER_STAGE.md](docs/DECOMPILER_STAGE.md)
 - [원본 바이트 검증 스크립트](tools/verify_wasapi_calls.py): 정확한 원본 SHA 확인 후 COM 호출 17개·GUID 6개를 검사. GNU objdump 필요.
 
 **여전히 복원·동등성 검증 중이며 완성된 원본 재현 DLL은 존재하지 않습니다. 최적화는 금지된 상태입니다.**
+
+## Stage 3 — 원본 ASIO 스레드/콜백의 실제 호출 관계
+
+- [콜백 처리 전체 연결, worker 필드, 초기 2회 프리롤, 포트 마스크 게이트](docs/ASIO_CALLBACK_PIPELINE.md)
+- [원본 IASIO 기본 메서드의 반환값·버퍼 보고 규칙](docs/IASIO_BASIC_METHODS.md)
+- [원본 DLL의 30개 스레드/콜백 opcode 서명 검사](tools/verify_callback_bytes.py)
+
+원본의 주요 지시어 30곳과 IASIO 기본 메서드 13곳을 실제 바이트로 대조했다. **이 숫자는 복원한 함수 개수나 동작 동일성 비율이 아니다.** 정적 근거를 확장한 것이며 원본 전체 분석, 실행 추적, 재현 DLL은 아직 미완료다.
+
+Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변하지 않는다.
