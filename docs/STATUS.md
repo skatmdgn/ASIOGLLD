@@ -78,3 +78,12 @@ Never overwrite the original or commit proprietary DLL bytes.
 ## Phase 1 Stage 5b — original GUI buffer-value transforms
 - Traced 0xB280 (buffer duration -> slider index) and 0xB310 (slider index -> duration). Uses original [10,50,100] data table, 10–100 custom clamp, midpoint cutoffs 30 and 75, and unusual >100 ordinary-mode fallback to index 0.
 - Added pure analysis model and four unit tests; local tests passed. This is NOT the original Windows runtime and NOT replica parity. See docs/BUFFER_SLIDER_ORIGINAL_ALGORITHM.md.
+
+
+## Phase 1 Batch 6 — one local analysis and one final upload
+- Local PE/objdump pipeline verified original immutable SHA and produced 6-section, 148-import, 5-export, 590-unwind inventory; 33,194 disassembly instruction rows.
+- Direct CALL targets 305, unwind-outside 67 (11 imports, 2 return stubs, 1 jump), candidate address anchors 677. These are not source-function counts.
+- Indirect calls **643**: 479 IAT-linked, 164 virtual/COM/callback/function-pointer sites still unidentified. 232 branches cross unwind ranges; per-site data in separately shared local analysis ZIP.
+- All **24** CAsio vtable entries and **38** port/worker opcode locations match original; port allocation 0xF8, shared/exclusive defaults 2ch/16bit, PollMode unsupported notification branch mapped.
+- Traced setSampleRate registration and kAsioResetRequest callback, canSampleRate port-dependent checks, getSamplePosition and stub methods.
+- **11 local tests pass.** No Windows original runtime verification, no compiled replica, no parity achieved, no optimization; **no CI run/added**. See BATCH6_COVERAGE.md and BATCH6_ASIO_METHODS.md.

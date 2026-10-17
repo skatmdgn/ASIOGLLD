@@ -57,3 +57,11 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - 검증된 원본 명령어 30/30, 레지스트리/GUI API import 11/11, preset [10,50,100]. 동등성 구현/최적화는 아직 없음.
 
 - [원본 버퍼 ↔ 슬라이더 변환 알고리즘](docs/BUFFER_SLIDER_ORIGINAL_ALGORITHM.md), [정적 Python 모델](tools/buffer_slider_model.py), [경계값 단위 테스트](tests/test_buffer_slider_model.py).
+
+
+## Batch 6 — 대량 정적 복원 (마지막에 한 번 업로드)
+- [원본 오디오 포트·스레드 분기](docs/BATCH6_PORT_WORKER.md)
+- [원본 IASIO 메서드 동작](docs/BATCH6_ASIO_METHODS.md)
+- [전체 함수·간접 호출 커버리지와 미확인 사항](docs/BATCH6_COVERAGE.md)
+- [읽기 전용 원본 검증 스크립트](tools/batch6_verify_original.py)
+- 별도 배포 Batch 6 ZIP에는 전체 함수/점프/간접 호출 JSON, 본격 분석 도구, 11개 로컬 테스트가 포함됨. 아직 Windows 런타임 동등성/복제 DLL 없음. CI 반복 실행은 보류.
