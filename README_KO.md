@@ -37,3 +37,11 @@ Windows Ghidra 자동화 설명: [DECOMPILER_STAGE.md](docs/DECOMPILER_STAGE.md)
 원본의 주요 지시어 30곳과 IASIO 기본 메서드 13곳을 실제 바이트로 대조했다. **이 숫자는 복원한 함수 개수나 동작 동일성 비율이 아니다.** 정적 근거를 확장한 것이며 원본 전체 분석, 실행 추적, 재현 DLL은 아직 미완료다.
 
 Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변하지 않는다.
+
+
+## Stage 4 원본 정적 복원 — 설정·UI·함수 누락 후보
+- [CWasapiConfig 생성자 및 레지스트리](docs/CONFIG_REGISTRY_RECOVERY.md): 초기값과 비트 필드, 실제 API 읽기·쓰기 RVA.
+- [원본 UI 템플릿](docs/UI_RESOURCES.md): 7개 대화상자 리소스와 28개 컨트롤; GUI 메시지/동작은 미복원.
+- [코드 타깃 커버리지](docs/COVERAGE_LEDGER_STAGE4.md): 590개 unwind 범위, 305개 직접 CALL 타깃, unwind 외부 67개 후보.
+- [로컬 재검증 도구](tools/recovery_v4.py): Python3 + GNU objdump, 원본 읽기 전용, 23 opcode 서명 확인.
+- 결과는 모두 정적 근거이며 **완전 복원이나 성능 개선의 증거는 아닙니다.**

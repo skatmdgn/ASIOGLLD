@@ -48,3 +48,12 @@ Never overwrite the original or commit proprietary DLL bytes.
 - Confirmed getBufferSize (0x1C50) copies positive object+0x3C to **min, max, preferred AND granularity**; do not silently 'correct' this unusual original behavior during reproduction.
 - getDriverVersion (0x1690) directly returns object+0x9C.
 - Method details and error branches: docs/IASIO_BASIC_METHODS.md. No runtime original/replica parity yet.
+
+
+## Phase 1 Stage 4: configuration, registry, resource and missing-leaf coverage
+- Verified original embedded config initialization: BufferDuration=10, SampleRate=44100, flags bit0 ExclusiveMode=1; PollMode bit1=0; UserDefinedBufferSize bit2=0. Registry can override these defaults. See CONFIG_REGISTRY_RECOVERY.md.
+- 23/23 config opcode checks, 9 registry key strings validated. Hash mutation is rejected.
+- Parsed 11 PE resource leaves, 7 dialog templates (main ID 130 has 28 controls, 6 languages including neutral), 0 parser exceptions. See UI_RESOURCES.md.
+- Confirmed 305 direct CALL targets (vs previous 304 with narrower .pdata-owned caller filter), 67 outside unwind. See COVERAGE_LEDGER_STAGE4.md.
+- Existing 30 callback and 13 IASIO basic checks re-executed: all match original; no new Windows runtime parity.
+- Stage 4 comprehensive Python tools/data available in the Stage4 analysis ZIP, plus reproducible summary script tools/recovery_v4.py. Still no faithful replica and no optimization.
