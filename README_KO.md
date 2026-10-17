@@ -110,3 +110,11 @@ Phase 1의 **원본 그대로 기능·알고리즘 재현 우선 원칙**은 변
 - [기계가 읽을 수 있는 검증 결과](analysis/BATCH11_SUMMARY.json)
 
 상세한 124개 명령어 바이트/6개 호출/3개 원본 상수 대조표와 34개 신규 테스트, 기존 77개 회귀 검사 전체 기록은 이 대화의 ASIOGLLD_Original_Recovery_Batch11.zip에 있다. 원본과 재현 DLL 간 동작 검증은 아직 전혀 하지 않았다. 최적화와 CI는 0회.
+
+
+## Batch12 원본 IASIO 24개 메서드 및 채널/레이트 전수 인터페이스 분석
+- [원본 IASIO 24 슬롯별 동작 및 반환 계약](docs/BATCH12_ASIO_CONTRACTS.md)
+- [포트별 채널 샘플 타입, 레이트 목록, 설정 실패 부작용](docs/BATCH12_CHANNEL_RATE.md)
+- [복원 이어가기 및 미완료 상태](docs/BATCH12_STATUS.md)
+- [부분 의미 Python 모델](tools/batch12_model.py) 및 [원본 바이너리 spotcheck](tools/batch12_spotcheck.py)
+- 19개 메서드/헬퍼 CFG, 206 opcode 핀, 7 direct call, 3 문자열 및 43개 신규 테스트 전체 코드/데이터는 Batch12 ZIP에 포함. 111개 이전 테스트 포함 로컬 154/154 PASS. 동작 동일한 DLL/Ghidra 전체 디컴파일/Windows 동적 검증 미완료. CI/최적화/원본 변경 없음.

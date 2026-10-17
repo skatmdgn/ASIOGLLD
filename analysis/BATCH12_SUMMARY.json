@@ -1,0 +1,21 @@
+{
+  "original_sha256": "e2a9088a71e61362b4b1cf9d11717a1278ef26c940e7ca716290cab7a93c5cfd",
+  "original_bytes": 173056,
+  "iasio_vtable_slots": 24,
+  "analyzed_cfg_windows": 19,
+  "basic_blocks": 152,
+  "within_window_edges": 198,
+  "window_call_positions": 17,
+  "local_full_opcode_pins": 206,
+  "local_direct_calls": 7,
+  "local_embedded_strings": 3,
+  "new_local_tests": 43,
+  "prior_regressions": 111,
+  "total_local_tests": 154,
+  "skipped": 0,
+  "full_original_restoration": false,
+  "replica_exists": false,
+  "windows_parity_verified": false,
+  "CI_runs": 0,
+  "optimizations": 0
+}
