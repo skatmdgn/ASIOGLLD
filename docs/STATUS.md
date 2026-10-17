@@ -28,3 +28,10 @@ Never overwrite the original or commit proprietary DLL bytes.
 - Corrected **590 .pdata ranges != 590 independent functions**; capture routine spans 4 unwind entries.
 - No replica built, no full semantic reconstruction, no parity test, and **no optimization**.
 - Next: exact sample format conversions, callback transfer, mode flags, exception/port lifecycle, missing function coverage, then original Windows runtime tracing.
+
+
+## Phase 1, static pass 2b
+- Mapped output sample interleaving 0x41B0–0x41CF and specialized/general copy helper at 0x23F0; original code (0x23F0) has no unwind entry.
+- Mapped capture GetNextPacketSize/GetBuffer/helper 0x2A90/ReleaseBuffer and called helpers 0x2900 and 0x2750.
+- Stage 1 direct-call map contains 304 unique direct targets; 67 are outside all 590 unwind ranges. These are **candidates, not a validated function count**.
+- See AUDIO_SAMPLE_TRANSFER.md and COVERAGE_LEDGER.md. Still no original-executable parity test or complete source reconstruction.
